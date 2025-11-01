@@ -8,4 +8,4 @@ jobs:
       - name: Checkout código
         uses: actions/checkout@v3
       - name: Ejecutar script Python
-        run: python3 script_prueba.py
+        run: mi-workflow_AZB-script_prueba.py
