@@ -12,7 +12,7 @@ jobs:
     steps:
       - name: Validar nombre de la rama
         run: |
-          echo "🔍 Validando nombre de rama: ${{ github.ref_name }}"
+          echo "Validando nombre de rama: ${{ github.ref_name }}"
 
           if echo "${{ github.ref_name }}" | grep -Eq '^(feature/|bugfix/|hotfix/)' ; then
             echo "Nombre de rama válido: ${{ github.ref_name }}"
