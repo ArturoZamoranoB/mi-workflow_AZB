@@ -10,14 +10,13 @@ jobs:
   validate-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: Validar nombre de la rama
+      - name: Validate branch name
         run: |
-          echo "Validando nombre de rama: ${{ github.ref_name }}"
-
+          echo "Validating branch name: ${{ github.ref_name }}"
           if echo "${{ github.ref_name }}" | grep -Eq '^(feature/|bugfix/|hotfix/)' ; then
-            echo "Nombre de rama válido: ${{ github.ref_name }}"
+            echo "✅ Valid branch name: ${{ github.ref_name }}"
           else
-            echo "Nombre de rama inválido: ${{ github.ref_name }}"
-            echo "Solo se permiten ramas que inicien con feature/, bugfix/ o hotfix/"
+            echo "❌ Invalid branch name: ${{ github.ref_name }}"
+            echo "Only feature/, bugfix/, or hotfix/ branches are allowed."
             exit 1
           fi
