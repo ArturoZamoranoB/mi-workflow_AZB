@@ -7,5 +7,6 @@ jobs:
     steps:
       - name: Checkout código
         uses: actions/checkout@v3
+
       - name: Ejecutar script Python
-        run: mi-workflow_AZB-script_prueba.py
+        run: python3 mi-workflow_AZB-script_prueba.py
